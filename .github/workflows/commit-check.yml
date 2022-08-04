@@ -8,13 +8,13 @@ on:
       - edited
       - reopened
       - synchronize
-  pull_request_target:
-    types:
-      - opened
-      - edited
-      - reopened
-      - synchronize
-  push:
+  # pull_request_target:
+    # types:
+      # - opened
+      # - edited
+      # - reopened
+      # - synchronize
+  # push:
 
 jobs:
   check-commit-message:
