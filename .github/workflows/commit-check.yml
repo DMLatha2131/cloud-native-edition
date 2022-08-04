@@ -52,6 +52,7 @@ jobs:
         if: github.event_name == 'pull_request'
         id: pr_get_commit_message
         run: |
+          git log --format=%B -n 1 HEAD^2
           git log --format=%B -n 1 HEAD^2 | npx commitlint |& tee -a output.txt
           echo "::set-output name=errormsg::$(tr -d "\n\r" < output.txt)"
           git log --format=%B -n 1 HEAD^2 | npx commitlint
